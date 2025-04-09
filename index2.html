@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grocery Store Items</title>
+    <script>
+       async function fetchItems() {
+        try {
+            // Make a GET request to the PHP script
+            const response = await fetch('http://localhost/fetch.php');
+
+            // Parse the JSON response from the server
+            const data = await response.json();
+
+            // Display the fetched data in the console (or manipulate it as needed)
+            console.log(data);
+
+            // Example: Append items to an HTML list
+            const itemsList = document.getElementById('items-list');
+            itemsList.innerHTML = data.map(item => `<li>${item.ItemName} - ${item.Category}</li>`).join('');
+        } catch (error) {
+            console.error('Error fetching items:', error);
+            }
+    }
+
+        // Fetch items when the page loads
+        window.onload = fetchItems;
+    </script>
+</head>
+<body>
+    <h1>Grocery Store Items</h1>
+    <ul id="items-list"></ul>
+</body>
+</html>
