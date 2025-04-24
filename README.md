@@ -2,6 +2,8 @@
 
 ## Project Overview
 This project focuses on building a grocery website using **HTML**, **PHP**, **JavaScript**, and **CSS**, hosted locally using **XAMPP**. During development, we identified and analyzed several security vulnerabilities, including **Path Traversal Attacks**, **Stored Cross-Site Scripting (XSS) Attacks**, and **SQL Injection**. Each team member contributed to investigating specific vulnerabilities and implementing mitigation strategies to enhance the website's security.
+![image](https://github.com/user-attachments/assets/0e80743a-60e0-4e6c-9267-faaf52f6662e)
+
 
 ## Project Features
 - A fully functional grocery website with front-end and back-end integration.
@@ -11,13 +13,15 @@ This project focuses on building a grocery website using **HTML**, **PHP**, **Ja
 ## Brandon Antoine Contributions
 ### Directory Traversal Attack
 My contribution to this project focused on understanding, demonstrating, and mitigating **Directory Traversal Attacks**:
-- **Research and Analysis**: Explored the nature and mechanisms of directory traversal attacks, which target files and directories outside the web root directory.
+- **Research and Analysis**: Explored the nature and mechanisms of directory traversal attacks, which target files and directories outside the web root directory.![image](https://github.com/user-attachments/assets/5041abe6-027a-430e-93a2-dbf07b7f02e0)
+![image](https://github.com/user-attachments/assets/c7b174d8-bbdd-4f9e-aaf5-12c03db661e0)
+
 - **Attack Simulation**: Analyzed folder structures and utilized tools such as **Burp Suite Intruder** to uncover vulnerabilities effectively.
 - **Mitigation Strategies**: Implemented robust solutions to prevent directory traversal attacks, such as:
   - Disabling directory browsing using `.htaccess` files.
   - Moving sensitive files outside the web root directory.
   - Restricting access to critical files using specific permissions.
-![image](https://github.com/user-attachments/assets/5041abe6-027a-430e-93a2-dbf07b7f02e0)
+
 
 ## Salman Alqahtani Contributions
 
