@@ -8,7 +8,7 @@ This project focuses on building a grocery website using **HTML**, **PHP**, **Ja
 - User-friendly interface and database-driven functionalities.
 - Security assessments of the website's vulnerabilities.
 
-## Contributions
+## Brandon Antoine Contributions
 ### Directory Traversal Attack
 My contribution to this project focused on understanding, demonstrating, and mitigating **Directory Traversal Attacks**:
 - **Research and Analysis**: Explored the nature and mechanisms of directory traversal attacks, which target files and directories outside the web root directory.
@@ -18,8 +18,11 @@ My contribution to this project focused on understanding, demonstrating, and mit
   - Moving sensitive files outside the web root directory.
   - Restricting access to critical files using specific permissions.
 
-### Other Team Contributions
+## Salman Alqahtani Contributions
+
 - **Stored XSS Attack**: Analysis and mitigation of vulnerabilities arising from malicious scripts stored in the database and executed on the affected page.
+
+## Celeste Casillas Contributions
 - **SQL Injection**: Investigation and implementation of secure coding practices, such as prepared statements, to prevent SQL injection attacks and safeguard the database.
 
 ## Key Learning Outcomes
