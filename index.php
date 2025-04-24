@@ -19,7 +19,53 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("search-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        handleSearch();
+      });
+    });
 
+    async function handleSearch() {
+      const query = document.getElementById('search-input').value;
+      try {
+        const response = await fetch(`php/fetch.php?search=${encodeURIComponent(query)}`);
+        const data = await response.json();
+
+        const itemsGrid = document.querySelector('.product-grid2');
+        if (data.length > 0) {
+          itemsGrid.innerHTML = data.map(item => `
+            <div class="col">
+              <div class="product-item">
+                <figure>
+                  <a href="#" title="${item.ItemName}">
+                    <img src="${item.ImageURL}" alt="${item.ItemName}" style="width:100%; height:45vh; border-radius: 5px;">
+                  </a>
+                </figure>
+                <h3>${item.ItemName}</h3>
+                <span class="qty">1 Unit</span>
+                <span class="price" style="font-weight: bold; color: #333;">$${item.Price}</span>
+              </div>
+            </div>
+          `).join('');
+        } else {
+          itemsGrid.innerHTML = `
+            <div class="col">
+              <div class="alert alert-warning text-center">No items found</div>
+            </div>
+          `;
+        }
+      } catch (error) {
+        console.error('Error fetching items:', error);
+        document.querySelector('.product-grid2').innerHTML = `
+          <div class="col">
+            <div class="alert alert-danger text-center">Failed to fetch items. Please try again later.</div>
+          </div>
+        `;
+      }
+    }
+  </script>
   </head>
   <body>
 
@@ -161,8 +207,8 @@
                 </select>
               </div>
               <div class="col-11 col-md-7">
-                <form id="search-form" class="text-center" action="index.html" method="post">
-                  <input type="text" class="form-control border-0 bg-transparent" placeholder="Search for more than 20,000 products" />
+                <form id = "search-form" class="text-center" onClick="handleSearch()">
+                  <input type="text" id ="search-input"class="form-control border-0 bg-transparent" placeholder="Search for more than 20,000 products" />
                 </form>
               </div>
               <div class="col-1">
@@ -283,7 +329,8 @@
         </div>
       </div>
     </header>
-    
+    <div class="product-grid2 row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+  </div>
     <section class="py-3" style="background-image: url('images/background-pattern.jpg');background-repeat: no-repeat;background-size: cover;">
       <div class="container-fluid">
         <div class="row">
@@ -595,6 +642,7 @@
                 <h3>Trending Products</h3>
                 <nav>
                   <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    
                     <a href="#" class="nav-link text-uppercase fs-6 active" id="nav-all-tab" data-bs-toggle="tab" data-bs-target="#nav-all">All</a>
                     <a href="#" class="nav-link text-uppercase fs-6" id="nav-fruits-tab" data-bs-toggle="tab" data-bs-target="#nav-fruits">Fruits & Veges</a>
                     <a href="#" class="nav-link text-uppercase fs-6" id="nav-juices-tab" data-bs-toggle="tab" data-bs-target="#nav-juices">Juices</a>
