@@ -17,6 +17,7 @@ My contribution to this project focused on understanding, demonstrating, and mit
   - Disabling directory browsing using `.htaccess` files.
   - Moving sensitive files outside the web root directory.
   - Restricting access to critical files using specific permissions.
+![image](https://github.com/user-attachments/assets/5041abe6-027a-430e-93a2-dbf07b7f02e0)
 
 ## Salman Alqahtani Contributions
 
