@@ -16,11 +16,14 @@ My contribution to this project focused on understanding, demonstrating, and mit
 - **Research and Analysis**: Explored the nature and mechanisms of directory traversal attacks, which target files and directories outside the web root directory.![image](https://github.com/user-attachments/assets/5041abe6-027a-430e-93a2-dbf07b7f02e0)
 ![image](https://github.com/user-attachments/assets/c7b174d8-bbdd-4f9e-aaf5-12c03db661e0)
 
-- **Attack Simulation**: Analyzed folder structures and utilized tools such as **Burp Suite Intruder** to uncover vulnerabilities effectively.
+- **Attack Simulation**: Analyzed folder structures and utilized tools such as **Burp Suite Intruder** to uncover vulnerabilities effectively.![image](https://github.com/user-attachments/assets/1a5749ef-8ce0-4534-be69-8f1d31d0bbbc)
+
 - **Mitigation Strategies**: Implemented robust solutions to prevent directory traversal attacks, such as:
   - Disabling directory browsing using `.htaccess` files.
   - Moving sensitive files outside the web root directory.
   - Restricting access to critical files using specific permissions.
+    ![image](https://github.com/user-attachments/assets/6eb45e20-da1c-4006-8ef8-43eba01f9245)
+
 
 
 ## Salman Alqahtani Contributions
